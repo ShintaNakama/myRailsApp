@@ -11,7 +11,7 @@ class ProfilesController < ApplicationController
       @icon = @forecasts["info"]["images"]["icon"]
       @icon2 = @forecasts["info"]["images"]["icon_s"]
       @background = @forecasts["info"]["images"]["background"]
-
+      
       @tes = FortuneAPI::get_preresult('KSK', 'free001').get_data
   end
 

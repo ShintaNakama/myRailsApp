@@ -1,8 +1,15 @@
 <p id="notice"><%= notice %></p>
-
-<h1>占い結果</h1>
-  <h3><%= @resultTitle %></h3>
-  <p><%= @resultBody %></p>
+<section class="forecast">
+  <div class="logo">
+    <img src="<%= @icon %>">
+    <img src="<%= @icon2 %>">
+  </div>
+  <div class="forecastText">
+    <h1>占い結果</h1>
+      <h3><%= @resultTitle %></h3>
+        <p><%= @resultBody %></p>
+  </div>
+</section>
 <p>
   <strong>Lastname:</strong>
   <%= @profile.lastNameKana %>
