@@ -1,0 +1,30 @@
+// Place all the styles related to the profiles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.forecast {
+    width: 100%;
+    text-align: center; 
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.forecast h1 {
+    padding-bottom: 30px;
+    
+}
+.logo {
+    background-image: url("<%= @background %>");
+}
+.forecast h1 {
+    font-size: 30px;
+}
+.forecast p {
+    
+}
+.profiles {
+    text-align: center;
+}
+.btn {
+    width: 20px;
+}

@@ -1,0 +1,52 @@
+<p id="notice"><%= notice %></p>
+<section class="forecast">
+<div class="logo" style="background: url(<%= @background %>) no-repeat center">
+<img src="<%= @icon %>">
+<img src="<%= @icon2 %>">
+</div>
+
+<h1><%= @forecasts["info"]["name"] %></h1>
+<p><%= @forecasts["info"]["caption"] %></p>
+
+
+</section>
+<section class="profiles">
+<h2>占いたいプロフィールを選んでください</h2>
+<h2>Profiles</h2>
+<div class="table">
+<table align="center">
+  <thead>
+    <tr>
+      <th>Lastname</th>
+      <th>Firstname</th>
+      <th>Birthday</th>
+      <th>Bloodtype</th>
+      <th>Sex</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @profiles.each do |profile| %>
+      <tr>
+        <td><%= profile.lastNameKana %></td>
+        <td><%= profile.firstNameKana %></td>
+        <td><%= profile.birthDay %></td>
+        <td><%= profile.bloodType %></td>
+        <td><%= profile.sex %></td>
+        <td><button><%= link_to 'Show', profile %></button></td>
+        <td><button><%= link_to 'Edit', edit_profile_path(profile) %></button></td>
+        <td><button><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
+        <td><button><%= link_to '占う', forecasts_result_path(profile) %></button></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+</section>
+<br>
+<section class="button">
+<button>
+<%= link_to 'New Profile', new_profile_path %>
+</button>
+</section>

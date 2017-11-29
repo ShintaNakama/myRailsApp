@@ -1,0 +1,43 @@
+<%= form_with(model: profile, local: true) do |form| %>
+  <% if profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+
+      <ul>
+      <% profile.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :lastNameKana %>
+    <%= form.text_field :lastNameKana, id: :profile_lastName %>
+  </div>
+
+  <div class="field">
+    <%= form.label :firstNameKana %>
+    <%= form.text_field :firstNameKana, id: :profile_firstName %>
+  </div>
+
+  <div class="field">
+    <%= form.label :birthDay %>
+    <%= form.date_select :birthDay, :use_month_numbers => true, :start_year => 1930, id: :profile_birthDay %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bloodType %>
+    <%= form.select :bloodType, ["A型","B型","O型","AB型"] %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sex %>
+    <label><%= form.radio_button :sex, "men"%>Men</label>
+    <label><%= form.radio_button :sex, "women"%>Woman</label>
+  <div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
