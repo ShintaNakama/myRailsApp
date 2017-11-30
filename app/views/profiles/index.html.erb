@@ -1,4 +1,5 @@
 <p id="notice"><%= notice %></p>
+<div class="contents">
 <section class="forecast">
   <div class="logo">
     <img src="<%= @icon %>">
@@ -28,7 +29,6 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-
   <tbody>
     <% @profiles.each do |profile| %>
       <tr>
@@ -49,3 +49,4 @@
 </section>
 <br>
   <%= link_to 'New Profile', new_profile_path, class: 'button' %>
+</div>
