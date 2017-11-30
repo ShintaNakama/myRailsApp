@@ -6,6 +6,9 @@ class ForecastsController < ApplicationController
       @icon = @forecasts["info"]["images"]["icon"]
       @icon2 = @forecasts["info"]["images"]["icon_s"]
       @profile = Profile.find(params[:id])
+
+      @forecastsName = @forecasts["info"]["caption"]
+      
       # forture_api 186行目
       @result = FortuneAPI::get_result('KSK', 'free001', @profile, nil).get_data
       

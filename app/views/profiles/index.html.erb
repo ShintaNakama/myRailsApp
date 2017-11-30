@@ -9,6 +9,10 @@
     <p><%= @forecasts["info"]["caption"] %></p>
   </div>
 </section>
+<section class="movie">
+    <h2>日下由紀恵　出版記念セミナー</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Pqolr-wTNTw" frameborder="0" allowfullscreen></iframe>
+  </section>
 <section class="profiles">
 <h2>占いたいプロフィールを選んでください</h2>
 <h2>Profiles</h2>
@@ -33,10 +37,10 @@
         <td><P><%= profile.birthDay %></P></td>
         <td><P><%= profile.bloodType %></P></td>
         <td><P><%= profile.sex %></P></td>
-        <td><button><%= link_to 'Show', profile %></button></td>
-        <td><button><%= link_to 'Edit', edit_profile_path(profile) %></button></td>
-        <td><button><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
-        <td><button><%= link_to '占う', forecasts_result_path(profile) %></button></td>
+        <td><%= link_to 'Show', profile, class: 'button' %></td>
+        <td><%= link_to 'Edit', edit_profile_path(profile), class: 'button' %></td>
+        <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button' %></td>
+        <td><%= link_to '占う', forecasts_result_path(profile), class: 'button' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -44,8 +48,4 @@
 </div>
 </section>
 <br>
-<section class="button">
-<button>
-<%= link_to 'New Profile', new_profile_path %>
-</button>
-</section>
+  <%= link_to 'New Profile', new_profile_path, class: 'button' %>

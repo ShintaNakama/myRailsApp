@@ -10,6 +10,7 @@
         <p><%= @resultBody %></p>
   </div>
 </section>
+<section class="profiles">
 <p>
   <strong>Lastname:</strong>
   <%= @profile.lastNameKana %>
@@ -34,6 +35,6 @@
   <strong>Sex:</strong>
   <%= @profile.sex %>
 </p>
-
-<button><%= link_to 'Edit', edit_profile_path(@profile) %></button> |
+</section>
+<button><%= link_to 'Edit', edit_profile_path(@profile) %></button>
 <button><%= link_to 'Back', profiles_path %></button>
