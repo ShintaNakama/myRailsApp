@@ -1,5 +1,7 @@
+<div class="contents">
 <h1>New Profile</h1>
 <p>*プロフィールはひらがなで入力ください</p>
 <%= render 'form', profile: @profile %>
 
-<button><%= link_to 'Back', profiles_path %></button>
+<%= link_to 'Back', profiles_path, class: 'button' %>
+</div>

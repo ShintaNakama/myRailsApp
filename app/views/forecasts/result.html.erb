@@ -1,4 +1,5 @@
 <p id="notice"><%= notice %></p>
+<div class="contents">
 <section class="forecast">
   <div class="logo">
     <img src="<%= @icon %>">
@@ -36,5 +37,6 @@
   <%= @profile.sex %>
 </p>
 </section>
-<button><%= link_to 'Edit', edit_profile_path(@profile) %></button>
-<button><%= link_to 'Back', profiles_path %></button>
+  <%= link_to 'Edit', edit_profile_path(@profile), class: 'button' %>
+  <%= link_to 'Back', profiles_path, class: 'button' %>
+</div>

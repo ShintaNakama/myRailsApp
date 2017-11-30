@@ -1,3 +1,4 @@
+<div class="contents">
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -25,5 +26,6 @@
   <%= @profile.sex %>
 </p>
 
-<button><%= link_to 'Edit', edit_profile_path(@profile) %></button> |
-<button><%= link_to 'TOP', profiles_path %></button>
+<%= link_to 'Edit', edit_profile_path(@profile), class: 'button' %>
+<%= link_to 'TOP', profiles_path, class: 'button' %>
+</div>

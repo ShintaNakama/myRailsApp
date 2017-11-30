@@ -1,6 +1,7 @@
 <h1>Editing Profile</h1>
-
+<div class="contents">
 <%= render 'form', profile: @profile %>
 
-<button><%= link_to 'Show', @profile %></button> |
-<button><%= link_to 'Back', profiles_path %></button>
+<%= link_to 'Show', @profile, class: 'button' %>
+<%= link_to 'Back', profiles_path, class: 'button' %>
+</div>
