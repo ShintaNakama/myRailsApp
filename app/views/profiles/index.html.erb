@@ -1,10 +1,23 @@
 <p id="notice"><%= notice %></p>
 <div class="contents">
 <section class="forecast">
-  <div class="logo">
-    <img src="<%= @icon %>">
-    <img src="<%= @icon2 %>">
-  </div>
+    <script>
+    $("#image logo1 img").rotate({ 
+		bind: 
+			{ 
+				click: function(){
+					$(this).rotate({
+						angle: 0,
+						animateTo: 360,
+						easing: $.easing.easeInOutExpo
+					})
+				}
+			} 
+	});
+    </script>
+    <div class="logo1"><img src="<%= @icon %>" id="image"></div>
+    <!--<div class="logo2"><img src="<%= @icon2 %>" id="image"></div> -->
+  
   <div class="forecastText">
     <h1><%= @forecasts["info"]["name"] %></h1>
     <p><%= @forecasts["info"]["caption"] %></p>
