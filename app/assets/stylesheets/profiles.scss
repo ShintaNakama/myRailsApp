@@ -1,11 +1,21 @@
 // Place all the styles related to the profiles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#rotate {
+    
 
+}
+#rotate:hover {
+    
+}
 .movie {
     text-align: center;
 }
-#image {
+.logo1 figure {
     cursor: pointer;
+    transform: rotate(0); transition: transform .5s;
+}
+.logo1 figure :hover{
+    transform: rotate(180deg);
 }
 

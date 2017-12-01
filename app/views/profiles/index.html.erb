@@ -1,21 +1,13 @@
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="/rotate.js"></script>
 <p id="notice"><%= notice %></p>
+
 <div class="contents">
+
 <section class="forecast">
-    <script>
-    $("#image logo1 img").rotate({ 
-		bind: 
-			{ 
-				click: function(){
-					$(this).rotate({
-						angle: 0,
-						animateTo: 360,
-						easing: $.easing.easeInOutExpo
-					})
-				}
-			} 
-	});
-    </script>
-    <div class="logo1"><img src="<%= @icon %>" id="image"></div>
+    <div class="logo1"　id="rotate">
+        <figure><img src="<%= @icon %>"></figure>
+    </div>
     <!--<div class="logo2"><img src="<%= @icon2 %>" id="image"></div> -->
   
   <div class="forecastText">
